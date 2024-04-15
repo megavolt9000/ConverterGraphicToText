@@ -88,6 +88,7 @@ public class Converter_Test_2 implements TextGraphicsConverter {
             }
             sb.append("\n");
 
+            
         }
         return sb.toString();
     }
