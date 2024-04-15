@@ -6,6 +6,7 @@ public class ColorShema_Test implements TextColorSchema{
 
         return "#$@%*+-.".charAt(color / 32);
 
+
         /**
          //return 0;
          if (color >=240)
