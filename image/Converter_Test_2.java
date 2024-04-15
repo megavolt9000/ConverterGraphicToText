@@ -65,12 +65,6 @@ public class Converter_Test_2 implements TextGraphicsConverter {
         return img;
     }
 
-    /**
-     * Метод конвертации изображения в символьную графику
-     *
-     * @param img оригинал изображение
-     * @return возврат изображения состоящего из символов
-     */
     private String ConvertImg(BufferedImage img) {
         WritableRaster bwRaster = getWritableRaster(img);
         char[][] textGraphics = new char[newHeight][newWidth];
@@ -88,7 +82,7 @@ public class Converter_Test_2 implements TextGraphicsConverter {
             }
             sb.append("\n");
 
-            
+
         }
         return sb.toString();
     }
