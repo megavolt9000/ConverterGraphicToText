@@ -12,8 +12,8 @@ public class Converter_Test_2 implements TextGraphicsConverter {
     private int width;
     private int height;
     private double maxRatio;
-    private int newWidth;
-    private int newHeight;
+    //  private int newWidth;
+    //  private int newHeight;
     private TextColorSchema schema;
 
     public Converter_Test_2() {
@@ -23,7 +23,7 @@ public class Converter_Test_2 implements TextGraphicsConverter {
     @Override
     public String convert(String url) throws IOException, BadImageSizeException {
         BufferedImage img = getBufferedImage(url);
-        return ConvertImg(img);
+        return convertImg(img);
     }
 
     @Override
@@ -65,7 +65,9 @@ public class Converter_Test_2 implements TextGraphicsConverter {
         return img;
     }
 
-    private String ConvertImg(BufferedImage img) {
+    private String convertImg(BufferedImage img) {
+        int newWidth = img.getWidth();
+        int newHeight = img.getHeight();
         WritableRaster bwRaster = getWritableRaster(img);
         char[][] textGraphics = new char[newHeight][newWidth];
         for (int i = 0; i < textGraphics.length; i++) {
@@ -88,6 +90,8 @@ public class Converter_Test_2 implements TextGraphicsConverter {
 
 
     private WritableRaster getWritableRaster(BufferedImage img) {
+        int newWidth;
+        int newHeight;
         if (img.getWidth() > width || img.getHeight() > height) {
             double tmpWidth;
             double tmpHeight;
