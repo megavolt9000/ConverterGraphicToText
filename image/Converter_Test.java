@@ -1,14 +1,12 @@
 package ru.netology.graphics.image;
-import org.w3c.dom.ls.LSOutput;
-import ru.netology.graphics.image.ColorShema_Test;
-import java.io.*;
-import java.awt.Color;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.net.URL;
-import java.io.FileWriter;
 
 import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.URL;
 
 
 public class Converter_Test implements TextGraphicsConverter {
@@ -25,7 +23,7 @@ public class Converter_Test implements TextGraphicsConverter {
         this.textDone = null;
 
         FileWriter writer = new FileWriter("converted-image.txt", false);
-        TextColorSchema schema = new ColorShema_Test();
+        TextColorSchema schema = new ColorSchema();
         BufferedImage img = ImageIO.read(new URL(url));
         width = img.getWidth();
         height = img.getHeight();

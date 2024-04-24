@@ -8,14 +8,14 @@ import java.io.IOException;
 import java.net.URL;
 
 public class Converter_Test_3 implements TextGraphicsConverter {
+    protected double ratio;
     private int width;
     private int height;
     private double maxRatio;
     private TextColorSchema schema;
-    protected double ratio;
 
     public Converter_Test_3() {
-        schema = new ColorShema_Test();
+        schema = new ColorSchema();
     }
 
     @Override

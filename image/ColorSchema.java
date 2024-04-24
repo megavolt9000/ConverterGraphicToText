@@ -1,6 +1,6 @@
 package ru.netology.graphics.image;
 
-public class ColorShema_Test implements TextColorSchema {
+public class ColorSchema implements TextColorSchema {
     @Override
     public char convert(int color) {
         char[] symbols = {'#', '$', '@', '%', '*', '+', '-', '.'};

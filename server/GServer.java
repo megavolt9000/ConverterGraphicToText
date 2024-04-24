@@ -4,9 +4,10 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
 import ru.netology.graphics.image.TextGraphicsConverter;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.InetSocketAddress;
-import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -16,8 +17,8 @@ import java.nio.file.Path;
 public class GServer {
     public static final int PORT = 8888;
 
-    private HttpServer server;
-    private TextGraphicsConverter converter;
+    private final HttpServer server;
+    private final TextGraphicsConverter converter;
 
     public GServer(TextGraphicsConverter converter) throws Exception {
         if (converter == null) {

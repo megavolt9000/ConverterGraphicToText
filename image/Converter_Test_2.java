@@ -17,7 +17,7 @@ public class Converter_Test_2 implements TextGraphicsConverter {
     private TextColorSchema schema;
 
     public Converter_Test_2() {
-        schema = new ColorShema_Test();
+        schema = new ColorSchema();
     }
 
     @Override
