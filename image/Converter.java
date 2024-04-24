@@ -85,10 +85,10 @@ public class Converter implements TextGraphicsConverter {
         }
         //Собираем строку из символов
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < image.length; i++) {
-            for (int j = 0; j < image[i].length; j++) {
-                sb.append(image[i][j]);
-                sb.append(image[i][j]);
+        for (char[] pixel : image) {
+            for (char c : pixel) {
+                sb.append(c);
+                sb.append(c);
             }
             sb.append("\n");
 
