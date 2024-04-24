@@ -64,8 +64,10 @@ public class Converter implements TextGraphicsConverter {
 
         //создаем символьный массив под новые размеры картинки
         char[][] image = new char[newHeight][newWidth];
+
         // ссылка на новую картинку
         Image scaledImage = img.getScaledInstance(newWidth, newHeight, BufferedImage.SCALE_SMOOTH);
+
         //создаем пустую BW картинку
         BufferedImage bwImg = new BufferedImage(newWidth, newHeight, BufferedImage.TYPE_BYTE_GRAY);
         Graphics2D graphics = bwImg.createGraphics();
